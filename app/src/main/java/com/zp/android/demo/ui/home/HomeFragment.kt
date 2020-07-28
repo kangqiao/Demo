@@ -1,5 +1,6 @@
 package com.zp.android.demo.ui.home
 
+import android.app.Activity
 import android.content.ComponentName
 import android.content.Context.BIND_AUTO_CREATE
 import android.content.Intent
@@ -7,6 +8,7 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.os.RemoteException
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -76,6 +78,12 @@ class HomeFragment : BaseLazyFragment() {
 
 
     override fun lazyInit() {
+        var classLoader: ClassLoader? = this.javaClass.classLoader
+        while (classLoader != null) {
+            Log.e("leo", "classLoader:$classLoader")
+            classLoader = classLoader.parent
+        }
+        Log.e("leo", "classLoader:" + Activity::class.java.classLoader)
     }
 
 }
