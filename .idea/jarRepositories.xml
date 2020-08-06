@@ -61,5 +61,10 @@
       <option name="name" value="maven" />
       <option name="url" value="https://maven.aliyun.com/repository/releases" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven6" />
+      <option name="name" value="maven6" />
+      <option name="url" value="https://storage.flutter-io.cn/download.flutter.io" />
+    </remote-repository>
   </component>
 </project>
