@@ -1,0 +1,41 @@
+//apply plugin: 'groovy'
+//apply plugin: 'maven'
+//apply plugin: 'java-gradle-plugin'
+
+plugins {
+    id 'maven'
+    id 'java-gradle-plugin'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+
+//gradlePlugin {
+//    // Define the plugin
+//    plugins {
+//        transform {
+//            id = 'com.zp.plugin.transform'
+//            implementationClass = 'com.zp.plugin.transform.MyTransform'
+//        }
+//    }
+//}
+
+//设置maven deployer
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //设置插件的GAV参数
+            pom.groupId = 'com.zp.plugin'
+            pom.artifactId = 'transform'
+            pom.version = '1.0.0'
+            //文件发布到下面目录
+            repository(url: uri('../repo'))
+        }
+    }
+}

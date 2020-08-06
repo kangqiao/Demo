@@ -1,10 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.zp.plugin.dellog'
-dellogExtension {
-    sourceDir = '/src'
-}
+//apply plugin: 'com.zp.plugin.dellog'
+//dellogExtension {
+//    sourceDir = '/src'
+//}
+//apply plugin: 'com.zp.plugin.transform'
 
 android {
     compileSdkVersion 29

@@ -1,2 +1,5 @@
-include ':app', ':dellog'
+include ':net'
+include ':app'
+
+include  ':dellog' //, ':transform'
 rootProject.name = "demo"
