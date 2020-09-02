@@ -20,8 +20,15 @@ buildscript {
     }
 }
 
+String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
 allprojects {
     repositories {
+        maven {
+            url '/Users/zhaopan/workspace/new2/Demo/flutter_module/build/host/outputs/repo'
+        }
+        maven {
+            url uri("$storageUrl/download.flutter.io")
+        }
         maven { url 'https://maven.aliyun.com/repository/releases'}
 
         maven { url 'https://maven.aliyun.com/repository/google' }

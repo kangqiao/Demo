@@ -69,9 +69,7 @@ public class AmapWeatherApi extends NetworkApi {
                 }
                 return chain.proceed(request);
             }
-        }
-
-                ;
+        };
     }
 
     @Override
