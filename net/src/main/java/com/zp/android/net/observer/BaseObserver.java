@@ -18,7 +18,7 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     @Override
     public void onError(Throwable e) {
-        onFailure((ExceptionHandle.ResponeThrowable) e);
+        onFailure((ExceptionHandle.ResponseThrowable) e);
     }
 
     @Override
@@ -28,5 +28,5 @@ public abstract class BaseObserver<T> implements Observer<T> {
 
     public abstract void onSuccess(T t);
 
-    public abstract void onFailure(ExceptionHandle.ResponeThrowable e);
+    public abstract void onFailure(ExceptionHandle.ResponseThrowable e);
 }
